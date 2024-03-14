@@ -97,7 +97,6 @@ with ui.card(full_screen=True):  # Full screen option
             return fig
 
 # Displaying Seaborn Histogram
-penguins_df = load_penguins()
 with ui.card(full_screen=True):  # Full screen option
         @render.plot(alt="A Seaborn histogram on penguin body mass in grams.")
         def plot(): 
