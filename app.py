@@ -98,12 +98,12 @@ with ui.card(full_screen=True):  # Full screen option
 
 # Displaying Seaborn Histogram
 with ui.card(full_screen=True):  # Full screen option
-        @render.plot(alt="A Seaborn histogram on penguin body mass in grams.")
+        @render.plot(alt="A Seaborn histogram on penguin species by island.")
         def plot(): 
-            ax = sns.histplot(data=penguins_df, x="island") 
+            ax = sns.histplot(data=penguins_df, x="island", y="species") 
             ax.set_title("Seaborn Palmer Penguins")
             ax.set_xlabel("Island")
-            ax.set_ylabel("Count")
+            ax.set_ylabel("Species")
             return ax 
 
 # Display Plotly Scatter plot
